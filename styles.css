@@ -1,0 +1,299 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* Light gray background */
+    color: #333;
+    min-height: 100vh; /* Ensure body takes up full viewport height */
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #333; /* Dark gray to match logo */
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.logo {
+    width: 150px; /* Adjust size as needed */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #ccc; /* Light gray hover effect */
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1200x400?text=Midwest+Fishing+Lake'); /* Replace with a real image */
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    margin: 0;
+}
+
+.hero-content h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-decoration: none; /* Remove underline specifically for hero section */
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    background-color: #555; /* Medium gray */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.cta-button:hover {
+    background-color: #777; /* Lighter gray on hover */
+}
+
+/* General Section Styling */
+section {
+    padding: 40px 20px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #333;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: #555; /* Gray underline to match theme */
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Card Styling with Hover Effects */
+.card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 25px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+    white-space: normal;
+}
+
+.card-link {
+    display: inline-block; /* Ensure the link wraps the card properly */
+    text-decoration: none; /* Remove underline from link */
+    color: inherit; /* Inherit text color */
+}
+
+.card-link .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #333;
+    font-size: 1.2em;
+}
+
+.card p {
+    color: #666;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+/* Tips & Tricks Scrolling Cards */
+#tips .scroll-wrapper {
+    overflow: hidden; /* Hide overflow to keep cards within the box */
+    width: 100%;
+    position: relative;
+}
+
+#tips .card-container {
+    display: inline-flex; /* Align cards in a single row */
+    white-space: nowrap; /* Prevent wrapping */
+    animation: scroll 70s linear infinite; /* Slower animation */
+}
+
+#tips .card {
+    display: inline-block;
+    margin-right: 30px; /* Space between cards */
+    flex-shrink: 0;
+}
+
+/* Scrolling Animation */
+#tips .card-container:hover {
+    animation-play-state: paused; /* Pause on hover */
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%); /* Move exactly half the container width for seamless looping */
+    }
+}
+
+/* Midwest Guide Section */
+#midwest-guide .map-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#midwest-guide .midwestmap {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#midwest-guide .state-table {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#midwest-guide .state-table .table-title {
+    text-align: center;
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: normal;
+}
+
+#midwest-guide .state-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 2px solid #555; /* Add border around the entire table */
+}
+
+#midwest-guide .state-table th,
+#midwest-guide .state-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#midwest-guide .state-table th {
+    background-color: #555; /* Medium gray to match theme */
+    color: white;
+    font-weight: bold;
+}
+
+/* Add vertical line between the two halves */
+#midwest-guide .state-table th:nth-child(3),
+#midwest-guide .state-table td:nth-child(3) {
+    border-right: 2px solid #555; /* Vertical line after the third column */
+}
+
+#midwest-guide .state-table td {
+    color: #666;
+}
+
+#midwest-guide .state-table tr:last-child td {
+    border-bottom: none; /* Remove border from last row */
+}
+
+/* Style for state sections */
+#midwest-guide .state-table .left-state,
+#midwest-guide .state-table .right-state {
+    cursor: pointer; /* Indicate clickability */
+}
+
+/* Highlight effect */
+#midwest-guide .state-table .highlight {
+    background-color: #f0f0f0; /* Highlight color */
+}
+
+/* Community Section Cards (No Scrolling) */
+#community .card-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Resources Section */
+#resources {
+    padding: 40px 20px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.resource-button {
+    background-color: #555; /* Medium gray to match theme */
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+.resource-button:hover {
+    background-color: #777; /* Lighter gray on hover */
+}
+
+/* Contact Form Styling */
+.form-container {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    width: 100%;
+    margin-top: auto;
+}
