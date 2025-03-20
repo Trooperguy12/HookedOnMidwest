@@ -398,3 +398,37 @@ footer {
 .close-modal:hover {
     color: #ccc;
 }
+/* Visitor Counter Section */
+#visitor-counter {
+    padding: 20px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#visitor-counter h2 {
+    color: #333;
+    text-decoration: underline;
+    text-decoration-color: #555;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+#visitor-counter p {
+    color: #666;
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+.counter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.counter-container img {
+    max-width: 200px;
+    height: auto;
+}
