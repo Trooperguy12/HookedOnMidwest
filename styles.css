@@ -329,7 +329,7 @@ footer {
 
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(8, 1fr); /* 8 columns */
+    grid-template-columns: repeat(8, minmax(120px, 1fr)); /* 8 columns, each at least 120px wide */
     gap: 20px; /* Space between grid items */
     max-width: 1200px; /* Limit the width for larger screens */
     margin: 0 auto; /* Center the grid */
@@ -341,7 +341,7 @@ footer {
 
 .gallery-image {
     width: 100%;
-    max-width: 150px; /* Fixed width for images */
+    max-width: 100px; /* Smaller width for thumbnails */
     height: auto;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -398,6 +398,7 @@ footer {
 .close-modal:hover {
     color: #ccc;
 }
+
 /* Visitor Counter Section */
 #visitor-counter {
     padding: 20px;
