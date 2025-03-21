@@ -383,6 +383,7 @@ footer {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     display: block; /* Ensure the image behaves as a block element */
     margin: auto; /* Additional centering for older browsers */
+    object-fit: contain; /* Ensure the image scales properly without distortion */
 }
 
 .close-modal {
