@@ -327,6 +327,14 @@ footer {
     margin-bottom: 30px;
 }
 
+#gallery h3 {
+    color: #333;
+    text-align: center;
+    text-decoration-color: #555;
+    font-size: 1em;
+    margin-bottom: 30px;
+}
+
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(8, minmax(120px, 1fr)); /* 8 columns, each at least 120px wide */
