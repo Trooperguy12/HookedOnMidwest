@@ -457,6 +457,30 @@ footer {
     line-height: 1.4;
 }
 
+/* Gallery Button Styling */
+.gallery-button {
+    display: inline-block; /* Center the button */
+    background-color: #4a704e; /* Mossy green, matching resource buttons */
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px; /* Space between button and title */
+    text-align: center;
+}
+
+.gallery-button:hover {
+    background-color: #6a946e; /* Lighter mossy green on hover */
+}
+
+/* Center the button within the section */
+#gallery {
+    text-align: center; /* Ensure the button and headings are centered */
+}
+
 /* Media Query for Mobile Devices */
 @media (max-width: 768px) {
     .gallery-grid {
