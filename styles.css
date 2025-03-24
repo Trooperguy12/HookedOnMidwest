@@ -1,18 +1,18 @@
-/* Existing styles remain unchanged */
+/* Updated styles with lake background, adjusted text color, and section backgrounds */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0; /* Light gray background */
-    color: #333;
-    min-height: 100vh; /* Ensure body takes up full viewport height */
+    background-color: #1a3c34; /* Light sage green for an earthy base */
+    color: #1a2b2c; /* Dark slate blue for readable text */
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
 header {
-    background-color: #333; /* Dark gray to match logo */
-    color: white;
+    background-color: #1a3c34; /* Deep teal, like a Midwest lake */
+    color: #fff;
     text-align: center;
     padding: 20px;
     display: flex;
@@ -21,16 +21,16 @@ header {
 }
 
 .url-icon {
-    font-size: 24px; /* Size of the fish emoji/icon */
-    margin-right: 10px; /* Space between the icon and the logo */
-    vertical-align: middle; /* Align with the logo */
+    font-size: 24px;
+    margin-right: 10px;
+    vertical-align: middle;
 }
 
 .logo {
-    width: 150px; /* Adjust size as needed */
+    width: 150px;
     height: auto;
     margin-bottom: 10px;
-    vertical-align: middle; /* Ensure alignment with the icon */
+    vertical-align: middle;
 }
 
 nav ul {
@@ -44,18 +44,19 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: #d4e6d9; /* Light sage for contrast */
     text-decoration: none;
     font-weight: bold;
+    font-size: 18px;
 }
 
 nav ul li a:hover {
-    color: #ccc; /* Light gray hover effect */
+    color: #1a1818; /* Muted green hover effect */
 }
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1200x400?text=Midwest+Fishing+Lake'); /* Replace with a real image */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('lakebackgroundsize1.jpg');
     background-size: cover;
     background-position: center;
     height: 400px;
@@ -63,56 +64,65 @@ nav ul li a:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: white;
+    color: #fff;
     margin: 0;
 }
-
 .hero-content h2 {
     font-size: 2.5em;
     margin-bottom: 10px;
-    text-decoration: none; /* Remove underline specifically for hero section */
+    text-decoration: none;
 }
 
 .hero-content p {
     font-size: 1.2em;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 
 .cta-button {
-    background-color: #555; /* Medium gray */
-    color: white;
-    padding: 10px 20px;
+    background-color: #4a704e; /* Mossy green */
+    color: #fff;
+    padding: 10px 30px;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 15px;
     font-weight: bold;
 }
 
 .cta-button:hover {
-    background-color: #777; /* Lighter gray on hover */
+    background-color: #6a946e; /* Lighter mossy green */
 }
 
 /* General Section Styling */
 section {
     padding: 40px 20px;
     margin: 20px;
-    background-color: white;
+    background: url('https://images.unsplash.com/photo-1519606247872-1bb49d23e0d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80') repeat; /* Subtle water texture */
+    background-size: 200px; /* Smaller repeat for texture effect */
+    background-color: #cae2d3; /* Light bluish-gray base */
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
-    color: #333;
+h1 {
+    color: #ffffff; /* Deep teal for headings */
     text-align: center;
-    text-decoration: underline;
-    text-decoration-color: #555; /* Gray underline to match theme */
+    
+    text-decoration-color: #050505; /* Mossy green underline */
+    font-size: 3em;
+    margin-bottom: 50px;
+}
+h2 {
+    color: #0e0d0d; /* Deep teal for headings */
+    text-align: center;
+    
+    text-decoration-color: #050505; /* Mossy green underline */
     font-size: 2em;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 
 /* Card Styling with Hover Effects */
 .card {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
+    background-color: rgba(232, 236, 229, 0.9); /* Semi-transparent sage green */
+    border: 1px solid #080808; /* Muted green border */
     border-radius: 5px;
     padding: 25px;
     width: 300px;
@@ -123,9 +133,9 @@ h2 {
 }
 
 .card-link {
-    display: inline-block; /* Ensure the link wraps the card properly */
-    text-decoration: none; /* Remove underline from link */
-    color: inherit; /* Inherit text color */
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
 }
 
 .card-link .card:hover {
@@ -135,50 +145,55 @@ h2 {
 
 .card h3 {
     margin-top: 0;
-    color: #333;
+    color: #070707; /* Deep teal */
     font-size: 1.2em;
 }
 
 .card p {
-    color: #666;
+    color: #303e3f; /* Medium slate blue */
     font-size: 1em;
     line-height: 1.5;
 }
 
 /* Tips & Tricks Scrolling Cards */
 #tips .scroll-wrapper {
-    overflow: hidden; /* Hide overflow to keep cards within the box */
+    overflow: hidden;
     width: 100%;
     position: relative;
 }
 
 #tips .card-container {
-    display: inline-flex; /* Align cards in a single row */
-    white-space: nowrap; /* Prevent wrapping */
-    animation: scroll 70s linear infinite; /* Slower animation */
+    display: inline-flex;
+    white-space: nowrap;
+    animation: scroll 70s linear infinite;
 }
 
 #tips .card {
     display: inline-block;
-    margin-right: 30px; /* Space between cards */
+    margin-right: 30px;
     flex-shrink: 0;
 }
 
-/* Scrolling Animation */
 #tips .card-container:hover {
-    animation-play-state: paused; /* Pause on hover */
+    animation-play-state: paused;
 }
 
 @keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%); /* Move exactly half the container width for seamless looping */
-    }
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
 }
 
 /* Midwest Guide Section */
+#midwest-guide {
+    padding: 40px 20px;
+    margin: 20px;
+    background: url('https://images.unsplash.com/photo-1519606247872-1bb49d23e0d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80') repeat;
+    background-size: 200px;
+    background-color: #d9e4dd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
 #midwest-guide .map-container {
     text-align: center;
     margin-bottom: 20px;
@@ -192,66 +207,132 @@ h2 {
 }
 
 #midwest-guide .state-table {
-    max-width: 1000px;
+    max-width: 100%; /* Allow the table to fit the viewport */
     margin: 0 auto;
+    overflow-x: auto; /* Enable horizontal scrolling on small screens */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
 }
 
 #midwest-guide .state-table .table-title {
     text-align: center;
     font-size: 1.2em;
-    color: #333;
+    color: #050505;
     margin-bottom: 15px;
     font-weight: normal;
 }
 
 #midwest-guide .state-table table {
     width: 100%;
+    min-width: 800px; /* Ensure table has a minimum width for desktop */
     border-collapse: collapse;
-    background-color: #f9f9f9;
+    background-color: rgba(232, 236, 229, 0.9); /* Semi-transparent sage */
     border-radius: 5px;
     overflow: hidden;
-    border: 2px solid #555; /* Add border around the entire table */
+    border: 2px solid #4a704e; /* Mossy green border */
 }
 
 #midwest-guide .state-table th,
 #midwest-guide .state-table td {
     padding: 15px;
     text-align: left;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #a3c4a8;
+    white-space: normal; /* Allow text to wrap */
+    word-wrap: break-word; /* Break long words if necessary */
 }
 
 #midwest-guide .state-table th {
-    background-color: #555; /* Medium gray to match theme */
-    color: white;
+    background-color: #4a704e; /* Mossy green */
+    color: #fff;
     font-weight: bold;
 }
 
-/* Add vertical line between the two halves */
 #midwest-guide .state-table th:nth-child(3),
 #midwest-guide .state-table td:nth-child(3) {
-    border-right: 2px solid #555; /* Vertical line after the third column */
+    border-right: 2px solid #4a704e; /* Vertical line */
 }
 
 #midwest-guide .state-table td {
-    color: #666;
+    color: #070707;
 }
 
 #midwest-guide .state-table tr:last-child td {
-    border-bottom: none; /* Remove border from last row */
+    border-bottom: none;
 }
 
-/* Style for state sections */
 #midwest-guide .state-table .left-state,
 #midwest-guide .state-table .right-state {
-    cursor: pointer; /* Indicate clickability */
+    cursor: pointer;
 }
 
-/* Highlight effect */
 #midwest-guide .state-table .highlight {
-    background-color: #f0f0f0; /* Highlight color */
+    background-color: #c7d6cc; /* Slightly darker bluish-gray highlight */
 }
 
-/* Community Section Cards (No Scrolling) */
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    #midwest-guide .state-table table {
+        min-width: 0; /* Remove minimum width on mobile */
+        display: block; /* Switch to block layout for stacking */
+    }
+
+    #midwest-guide .state-table thead {
+        display: none; /* Hide headers on mobile (we’ll use pseudo-elements or labels if needed) */
+    }
+
+    #midwest-guide .state-table tbody,
+    #midwest-guide .state-table tr {
+        display: block; /* Stack rows */
+    }
+
+    #midwest-guide .state-table tr.state-row {
+        margin-bottom: 20px; /* Space between state pairs */
+        border-bottom: 1px solid #a3c4a8;
+    }
+
+    #midwest-guide .state-table td {
+        display: block; /* Stack cells */
+        text-align: left;
+        padding: 10px;
+        border: none; /* Remove borders for stacked layout */
+    }
+
+    /* Remove the vertical divider on mobile */
+    #midwest-guide .state-table td:nth-child(3) {
+        border-right: none;
+    }
+
+    /* Add labels for each cell using pseudo-elements */
+    #midwest-guide .state-table td:before {
+        content: attr(data-label); /* Use data-label attribute for labels */
+        font-weight: bold;
+        display: block;
+        margin-bottom: 5px;
+        color: #4a704e;
+    }
+
+    /* Adjust font size and padding */
+    #midwest-guide .state-table td {
+        font-size: 0.9em;
+    }
+
+    #midwest-guide .state-table .table-title {
+        font-size: 1em;
+    }
+}
+
+/* Extra Small Screens (e.g., iPhone SE) */
+@media (max-width: 480px) {
+    #midwest-guide .state-table td {
+        font-size: 0.8em;
+        padding: 8px;
+    }
+
+    #midwest-guide .state-table .table-title {
+        font-size: 0.9em;
+    }
+}
+
+/* Community Section Cards */
 #community .card-container {
     display: flex;
     justify-content: center;
@@ -263,7 +344,9 @@ h2 {
 #resources {
     padding: 40px 20px;
     margin: 20px;
-    background-color: white;
+    background: url('water.jpg') no-repeat center center;
+    background-size: 2700px 245px; /* Match the image dimensions for seamless tiling */
+    background-color: #d9e4dd; /* Light bluish-gray as fallback */
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -278,8 +361,8 @@ h2 {
 }
 
 .resource-button {
-    background-color: #555; /* Medium gray to match theme */
-    color: white;
+    background-color: #4a704e; /* Mossy green */
+    color: #fff;
     padding: 12px 25px;
     text-decoration: none;
     border-radius: 5px;
@@ -289,7 +372,7 @@ h2 {
 }
 
 .resource-button:hover {
-    background-color: #777; /* Lighter gray on hover */
+    background-color: #6a946e; /* Lighter mossy green */
 }
 
 /* Contact Form Styling */
@@ -303,8 +386,8 @@ h2 {
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #333;
-    color: white;
+    background-color: #1a3c34; /* Deep teal */
+    color: #d4e6d9; /* Light sage */
     width: 100%;
     margin-top: auto;
 }
@@ -313,75 +396,113 @@ footer {
 #gallery {
     padding: 40px 20px;
     margin: 20px;
-    background-color: white;
+    background: url('https://images.unsplash.com/photo-1519606247872-1bb49d23e0d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80') repeat;
+    background-size: 200px;
+    background-color: #d9e4dd;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 #gallery h2 {
-    color: #333;
+    color: #050505;
     text-align: center;
-    text-decoration: underline;
-    text-decoration-color: #555;
+    text-decoration-color: #4a704e;
     font-size: 2em;
     margin-bottom: 30px;
 }
 
 #gallery h3 {
-    color: #333;
+    color: #080808;
     text-align: center;
-    text-decoration-color: #555;
+    text-decoration-color: #4a704e;
     font-size: 1em;
     margin-bottom: 30px;
 }
 
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(8, minmax(120px, 1fr)); /* 8 columns, each at least 120px wide */
-    gap: 20px; /* Space between grid items */
-    max-width: 1200px; /* Limit the width for larger screens */
-    margin: 0 auto; /* Center the grid */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Dynamic columns based on available space */
+    gap: 20px;
+    max-width: 100%; /* Ensure it doesn’t exceed the viewport */
+    margin: 0 auto;
+    padding: 0 10px; /* Add padding to prevent edge overflow */
+    box-sizing: border-box;
 }
 
 .gallery-item {
     text-align: center;
+    width: 100%; /* Ensure items take full width of their grid cell */
 }
 
 .gallery-image {
-    width: 100%;
-    max-width: 100px; /* Smaller width for thumbnails */
+    width: 100%; /* Make image responsive within its container */
+    max-width: 150px; /* Slightly larger max-width for better visibility */
     height: auto;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    cursor: pointer; /* Indicate clickability */
-    transition: transform 0.2s ease; /* Add a slight hover effect */
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    display: block; /* Ensure proper block-level behavior */
+    margin: 0 auto; /* Center the image within the item */
 }
 
 .gallery-image:hover {
-    transform: scale(1.05); /* Slight zoom on hover */
+    transform: scale(1.05);
 }
 
 .gallery-item p {
     margin: 10px 0 0;
-    color: #666;
+    color: #0a0a0a;
     font-size: 0.9em;
     line-height: 1.4;
 }
 
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Smaller min-width for mobile */
+        gap: 15px; /* Reduce gap for tighter layout */
+    }
+
+    .gallery-image {
+        max-width: 120px; /* Adjust max-width for smaller screens */
+    }
+
+    .gallery-item p {
+        font-size: 0.8em; /* Slightly smaller text on mobile */
+    }
+}
+
+/* Extra Small Screens (e.g., iPhone SE) */
+@media (max-width: 480px) {
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Even smaller columns */
+        gap: 10px;
+    }
+
+    .gallery-image {
+        max-width: 100px; /* Match the original max-width */
+    }
+
+    .gallery-item p {
+        font-size: 0.7em; /* Further reduce text size */
+    }
+}
+
 /* Modal Styles */
 .modal {
-    display: none; /* Hidden by default */
+    display: none;
     position: fixed;
     z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
-    display: flex; /* Use flexbox to center content */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    overflow: auto; /* Allow scrolling if image is too large */
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
 }
 
 .modal-content {
@@ -389,45 +510,47 @@ footer {
     max-height: 80%;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    display: block; /* Ensure the image behaves as a block element */
-    margin: auto; /* Additional centering for older browsers */
-    object-fit: contain; /* Ensure the image scales properly without distortion */
+    display: block;
+    margin: auto;
+    object-fit: contain;
 }
 
 .close-modal {
     position: absolute;
     top: 20px;
     right: 30px;
-    color: white;
+    color: #fff;
     font-size: 40px;
     font-weight: bold;
     cursor: pointer;
 }
 
 .close-modal:hover {
-    color: #ccc;
+    color: #d4e6d9; /* Light sage */
 }
 
 /* Visitor Counter Section */
 #visitor-counter {
     padding: 20px;
     margin: 20px;
-    background-color: white;
+    background: url('https://images.unsplash.com/photo-1519606247872-1bb49d23e0d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80') repeat;
+    background-size: 200px;
+    background-color: #d9e4dd;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
 #visitor-counter h2 {
-    color: #333;
-    text-decoration: underline;
-    text-decoration-color: #555;
+    color: #080808;
+    
+    text-decoration-color: #4a704e;
     font-size: 1.5em;
     margin-bottom: 10px;
 }
 
 #visitor-counter p {
-    color: #666;
+    color: #080808;
     font-size: 1em;
     margin-bottom: 15px;
 }
