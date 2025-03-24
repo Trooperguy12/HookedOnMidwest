@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hooked On Midwest - Catch of the Week</title>
+        <link rel="stylesheet" href="styles.css">
+        <!-- Favicon Links -->
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="144x144" href="ms-icon-144x144.png">
+    </head>
+<body>
+    <header>
+        <a href="https://hookedonmidwest.com/" target="_blank">
+            <img src="logo.png" alt="Hooked On Midwest Logo" class="logo">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#tips">Tips & Tricks</a></li>
+                <li><a href="index.html#midwest-guide">Midwest Guide</a></li>
+                <li><a href="https://discord.gg/byeRUcjf9C" target="_blank">Community</a></li>
+                <li><a href="https://www.reddit.com/r/HookedOnMidwest" target="_blank">Reddit</a></li>
+                <li><a href="https://www.instagram.com/hookedonmidwest?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==/" target="_blank">Instagram</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="index.html#events">Events</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="gallery">
+        <a href="gallery.html" class="gallery-button">Back to Main Gallery</a>
+        <h2>🏆 Catch of the Week</h2>
+        <h3>Check out the best catches of the week! Want to be featured? Contact the Staff Team on Discord or Reddit.</h3>
+        <div class="gallery-grid">
+            <!-- Example gallery items for Catch of the Week -->
+            <div class="gallery-item">
+                <img src="insert image" 
+                     data-large="insert image" 
+                     alt="Fish Catch 1" class="gallery-image">
+                <p>Insert Fish, Location, Caught with, and date - @Dale</p>
+            </div>
+            <div class="gallery-item">
+                <img src="insert image" 
+                     data-large="insert image" 
+                     alt="Fish Catch 2" class="gallery-image">
+                <p>Insert Fish, Location, Caught with, and date - @</p>
+            </div>
+            <div class="gallery-item">
+                <img src="insert image" 
+                     data-large="insert image" 
+                     alt="Fish Catch 3" class="gallery-image">
+                <p>Insert Fish, Location, Caught with, and date - @</p>
+            </div>
+            <div class="gallery-item">
+                <img src="insert image" 
+                     data-large="insert image" 
+                     alt="Fish Catch 4" class="gallery-image">
+                <p>Insert Fish, Location, Caught with, and date - @</p>
+            </div>
+            <div class="gallery-item">
+                <img src="insert image" 
+                     data-large="insert image" 
+                     alt="Fish Catch 5" class="gallery-image">
+                <p>Insert Fish, Location, Caught with, and date - @</p>
+            </div>
+        </div>
+
+        <!-- Modal for displaying larger images -->
+        <div id="image-modal" class="modal">
+            <span class="close-modal">×</span>
+            <img id="modal-image" class="modal-content" alt="Large Fish Catch">
+        </div>
+    </section>
+
+    <!-- Visitor Counter Section -->
+    <section id="visitor-counter">
+        <h2>👀 Site Visits</h2>
+        <p>See how many anglers have visited Hooked On Midwest!</p>
+        <div class="counter-container">
+            <img src="https://hits.sh/yourusername.github.io/hooked-on-midwest.svg" alt="Visitor Count">
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Hooked On Midwest. Tight lines!</p>
+    </footer>
+
+    <script>
+        // Get modal elements
+        const modal = document.getElementById('image-modal');
+        const modalImage = document.getElementById('modal-image');
+        const closeModal = document.querySelector('.close-modal');
+
+        // Ensure modal is hidden on page load
+        modal.style.display = 'none';
+
+        // Get all gallery images
+        const galleryImages = document.querySelectorAll('.gallery-image');
+
+        // Add click event to each image
+        galleryImages.forEach(image => {
+            image.addEventListener('click', () => {
+                console.log('Image clicked:', image.src);
+                modal.style.display = 'block';
+                modalImage.src = image.getAttribute('data-large'); // Use the data-large attribute for the larger image
+                modalImage.alt = image.alt;
+            });
+        });
+
+        // Close modal when clicking the close button
+        closeModal.addEventListener('click', () => {
+            console.log('Close button clicked');
+            modal.style.display = 'none';
+        });
+
+        // Close modal when clicking outside the image
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                console.log('Clicked outside modal');
+                modal.style.display = 'none';
+            }
+        });
+
+        // Debug: Log when the page loads to check for unintended triggers
+        window.addEventListener('load', () => {
+            console.log('Catch of the Week page loaded');
+        });
+    </script>
+</body>
+</html>
